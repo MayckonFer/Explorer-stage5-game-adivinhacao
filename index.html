@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo Adivinhação</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <button type="button" class="button-darkMode">
+      <img src="./images/moon.png" alt="Alterar para tema escuro" />
+    </button>
+    <button type="button" class="button-lightMode hide">
+      <img src="./images/sun.png" alt="Alterar para tema claro" />
+    </button>
+
+    <p class="errorNumberInvalid">Número Inválido</p>
+    <p class="errorFieldAny">O campo não pode está vázio</p>
+    <main>
+      <div class="screen1">
+        <h1>Jogo da adivinhação</h1>
+        <p>Adivinhe um número entre 0 e 10</p>
+
+        <form>
+          <input type="number" id="input-number" />
+          <button id="btnTry">Tentar</button>
+        </form>
+      </div>
+
+      <div class="screen2 hide">
+        <h2>Acertou em 3 vezes</h2>
+        <button id="btnReset">Jogar novamente</button>
+      </div>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

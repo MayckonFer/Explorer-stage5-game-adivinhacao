@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --font-title: "Montserrat", sans-serif;
+  --font-paragraph: "DM Sans", sans-serif;
+}
+
+body {
+  background: url("./images/background-lightMode.jpg") no-repeat center;
+  background-size: cover;
+  font-size: 1.6rem;
+  transition: 300ms;
+
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+body,
+button,
+input {
+  font-family: var(--font-paragraph);
+}
+
+main {
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0.6rem;
+  padding: 4.8rem 6.4rem 6.4rem;
+
+  width: min(42.8rem, 90%);
+  margin-top: -12rem;
+
+  text-align: center;
+
+  animation: downtop 700ms 350ms backwards;
+}
+
+.hide {
+  display: none;
+}
+
+button {
+  background-color: #7879e1;
+  color: white;
+  font-weight: 700;
+  border-radius: 0 0.4rem 0.4rem 0;
+  cursor: pointer;
+  transition: background 300ms;
+}
+
+button:hover {
+  background-color: #6668c1;
+}
+
+/* Screen1 */
+h1 {
+  font-size: 2.4rem;
+  font-family: var(--font-title);
+  margin-bottom: 1.6rem;
+}
+
+h1,
+p {
+  color: #34355b;
+}
+
+p {
+  opacity: 0.8;
+}
+
+form {
+  margin-top: 4.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+input,
+button {
+  border: none;
+  padding: 1.6rem;
+}
+
+input {
+  background-color: #dce2e9;
+  width: 6.5rem;
+  border-radius: 0.4rem 0 0 0.4rem;
+}
+
+/* Screen2 */
+h2 {
+  font-size: 2.4rem;
+  font-weight: 400;
+
+  margin-bottom: 3.3rem;
+}
+
+.screen2 button {
+  border-radius: 0.4rem;
+}
+
+.errorNumberInvalid,
+.errorFieldAny {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+
+  background-color: #ff4e4e;
+  width: 100%;
+  padding: 1rem 0;
+
+  position: fixed;
+  top: 0;
+  transform: translateY(-4.5rem);
+  transition: 200ms;
+}
+
+.show {
+  transform: translateY(0);
+}
+
+/* Dark Mode */
+.button-darkMode,
+.button-lightMode {
+  background: none !important;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  padding: 0 !important;
+  animation: downtop 700ms 350ms backwards;
+}
+
+.button-darkMode img,
+.button-lightMode img {
+  width: 3.2rem;
+}
+
+.button-darkMode:hover,
+.button-lightMode:hover {
+  background-color: none !important;
+}
+
+.bg-darkMode {
+  background: url("./images/background-darkMode.jpg") no-repeat center;
+  background-size: cover;
+  transition: 200ms;
+}
+
+.title-darkMode {
+  color: white;
+}
+
+.bg-card {
+  background: rgb(70, 70, 70);
+  background: linear-gradient(
+    90deg,
+    rgba(70, 70, 70, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+/* Animations */
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transition: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
